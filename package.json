@@ -1,0 +1,48 @@
+{
+  "name": "dot-qqbot-bridge",
+  "version": "0.3.0-public-prep.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/build-local.cjs",
+    "check": "npm run typecheck && npm run build && npm test && npm run scan && npm run format:check",
+    "scan": "node scripts/scan-public.mjs",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"scripts/*.{cjs,mjs}\" \"*.{json,jsonc,md}\" \"docs/*.md\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\" \"scripts/*.{cjs,mjs}\" \"*.{json,jsonc,md}\" \"docs/*.md\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.4.0",
+    "agents": "0.33.0",
+    "ipaddr.js": "2.5.0",
+    "jose": "6.2.15",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261104.1",
+    "@types/node": "26.6.6",
+    "esbuild": "0.28.2",
+    "miniflare": "5.20261103.0-beta",
+    "prettier": "3.9.10",
+    "typescript": "7.0.2",
+    "wrangler": "4.157.0"
+  },
+  "license": "MIT",
+  "description": "Bridge a QQ Open Platform bot to dot via Managed OAuth MCP events on Cloudflare Workers. Single-owner pairing, Access authentication, private messages and replies.",
+  "engines": {
+    "node": ">=24.11.0 <25",
+    "npm": ">=11 <12"
+  },
+  "keywords": [
+    "dot",
+    "qqbot",
+    "mcp",
+    "cloudflare-workers",
+    "durable-objects",
+    "webhook",
+    "ai-agent",
+    "bridge",
+    "typescript"
+  ]
+}

@@ -1,0 +1,23 @@
+# package.json private=true is the publication guard; this is defense in depth.
+node_modules/
+dist/
+.wrangler/
+.dev.vars*
+.env*
+wrangler.json*
+wrangler.toml
+*.local.*
+private/
+secrets/
+credentials/
+baseline/
+snapshots/
+*.sqlite*
+*.db*
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+*.tar.gz
+*.zip

@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // TEMPLATE ONLY. First-time pairing is locally tested, not live-validated.
+  // Do not use this as an upgrade config for an existing namespace.
+  "name": "qq-dot-bridge-example",
+  "main": "dist/worker.js",
+  "no_bundle": true,
+  "compatibility_date": "2026-11-05",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "observability": { "enabled": false },
+  "vars": {
+    "ACCESS_HOSTNAME": "qq-mcp.example.com",
+    "ACCESS_TEAM_DOMAIN": "example-team.cloudflareaccess.com",
+    "QQ_WEBHOOK_HOSTNAME": "qq-webhook.example.com",
+    "ACCESS_AUD": "REPLACE_WITH_64_LOWERCASE_HEX_ACCESS_AUDIENCE",
+    "QQ_APP_ID": "REPLACE_WITH_YOUR_QQ_BOT_APP_ID",
+    "PAIRING_ENABLED": "false",
+    "BRIDGE_ENABLED": "false",
+    "EVENTS_ENABLED": "false",
+    "MCP_WRITE_ENABLED": "false",
+    "MANAGED_LEASE_MS": "60000",
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "BRIDGE", "class_name": "BridgeStore" }],
+  },
+  // No account ID, real domains, routes, or migrations are supplied.
+  // A NEW isolated deployment requires a reviewed new_sqlite_classes migration
+  // for BridgeStore and custom hostname routes. Existing deployments must retain
+  // their own migration history, binding, namespace, and owner records.
+}

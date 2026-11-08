@@ -1,0 +1,7 @@
+# Placeholders only. A copy named .dev.vars is ignored by Git.
+# ACCESS_OWNER_EMAIL is deliberately absent from the shareable Wrangler vars.
+ACCESS_OWNER_EMAIL="owner@example.com"
+QQ_APP_SECRET="REPLACE_WITH_YOUR_QQ_BOT_SECRET"
+# Obtain your own 32-byte key through an approved secret-provisioning workflow.
+# This placeholder is intentionally invalid. Never reuse test fixture keys.
+CALLBACK_KEYRING='{"activeKeyId":"key-1","keys":[{"id":"key-1","status":"active","keyBase64":"REPLACE_WITH_BASE64_32_BYTE_KEY"}]}'
