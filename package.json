@@ -1,6 +1,6 @@
 {
   "name": "dot-qqbot-bridge",
-  "version": "0.3.0-public-prep.2",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "scripts": {

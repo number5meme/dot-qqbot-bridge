@@ -37,7 +37,7 @@ import { readDiagnostics } from "./diagnostics.ts";
 import { productionBody } from "./production-body.ts";
 import { createHash } from "node:crypto";
 const EVENT = "qq.message.created",
-  VERSION = "0.3.0-public-prep.2",
+  VERSION = "0.3.0",
   RETENTION = 3600000,
   DEDUP = 86400000;
 type Auth = {

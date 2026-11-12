@@ -1,6 +1,6 @@
 # First-time pairing security review
 
-Scope: the local `0.3.0-public-prep.2` implementation. This is an independent source review plus local regression testing, not a formal audit, live-platform certification or deployment approval.
+Scope: the local `0.3.0` implementation. This is an independent source review plus local regression testing, not a formal audit, live-platform certification or deployment approval.
 
 ## Reviewed boundaries
 
